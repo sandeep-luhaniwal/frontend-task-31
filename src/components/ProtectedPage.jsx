@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import API from '../lib/axios'; // Make sure the path is correct
-import { getToken } from '../utils/auth'; // Adjust the path if needed
+import { getToken } from '../utlis/auth';
+import API from '../lib/axios';
+
 
 export default function ProtectedPage() {
   const [data, setData] = useState(null);
