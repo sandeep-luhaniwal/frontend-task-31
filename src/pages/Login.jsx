@@ -12,7 +12,7 @@ const Login = () => {
       const res = await API.post("/login", { username, password });
       localStorage.setItem("token", res.data.token);
       setMsg("Login successful!");
-      window.location.href = "/logout";
+      window.location.href = "/protected";
     } catch (err) {
       setMsg(err.response?.data?.message || "Login failed");
     }
