@@ -1,20 +1,18 @@
 import { Route, Routes } from "react-router-dom";
-import './App.css';
-import Login from "./components/Login";
-import ProtectedPage from "./components/ProtectedPage";
-import SignUp from "./components/SignUp";
+import "./App.css";
+import Login from "./pages/Login";
+import Protected from "./pages/Protected";
+import Register from "./pages/Register";
 
 function App() {
-
-
   return (
-    <div>
+    <>
       <Routes>
-        <Route path="/" element={<SignUp />} />
+        <Route path="/" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/protected" element={<ProtectedPage />} />
+        <Route path="/protected" element={<Protected />} />
       </Routes>
-    </div>
+    </>
   );
 }
 
